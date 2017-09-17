@@ -45,6 +45,13 @@ Product.propTypes = {
         'Invalid prop `' + propName + '` supplied to' +
         ' `' + componentName + '`. Validation failed.'
       );
+    } else {
+      if (!(instanceof props[propName] === 'number')){
+        return new Error(
+          'Invalid prop `' + propName + '` supplied to' +
+          ' `' + componentName + '`. Validation failed.'
+        );
+      }
     }
   },
 }
