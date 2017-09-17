@@ -40,8 +40,9 @@ Product.propTypes = {
   hasWatermark: PropTypes.bool,
   color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']).isRequired,
   weight: function(props, propName, componentName) {
-    if (!props[propName])
-    return new Error();
+    if (!props[propName]) {
+      return new Error();
+    }
   },
 }
 
