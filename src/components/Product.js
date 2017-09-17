@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class Product extends React.components {
+class Product extends React.component {
   render() {
     return (
       <ul>
