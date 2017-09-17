@@ -22,7 +22,7 @@ Product.defaultProps = {
 }
 
 function weightRange(props, propName, componentName) {
-  if (!props['hiddenLabel']) {
+  if (!props['weight']) {
     let value = props[propName];
 
     // If no hidden label is set, children are required for accessibility
