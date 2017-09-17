@@ -21,11 +21,13 @@ Product.defaultProps = {
   hasWatermark: false,
 }
 
-function weightRange(props, propName, componentName) {
-    if (props[propName] < 80 || props[propName] > 300) {
-      return new Error(propName + ' in ' + componentName + " is longer not within weight limit");
-    }
-};
+const weightRange = createPropType(
+  prop =>
+    Number.isInteger(prop) &&
+    prop <= 300 &&
+    prop >= 80,
+    'Must meet weight restrictions'
+)
 
 Product.propTypes = {
   name: PropTypes.string.isRequired,
