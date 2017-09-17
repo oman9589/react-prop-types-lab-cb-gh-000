@@ -21,19 +21,6 @@ Product.defaultProps = {
   hasWatermark: false,
 }
 
-function weightRange(props, propName, componentName) {
-  if (typeof props[propName] === 'number') {
-    let value = props[propName];
-    if (value < 80 || value > 300) {
-      return new Error("Required prop '${propName}' was not specified in '${componentName}.");
-    }
-
-  } else {
-    return new Error("Required prop '${propName}' was not specified in '${componentName}.");
-  }
-  return null;
-}
-
 Product.propTypes = {
   name: PropTypes.string.isRequired,
   producer: PropTypes.string,
