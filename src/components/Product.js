@@ -23,7 +23,7 @@ Product.defaultProps = {
 
 function weightRange(props, propName, componentName) {
   let value = props[propName];
-  if (value % 1 === 0) {
+  if (!(typeof value === 'number')) {
     if (value < 80 || value > 300) {
       return new Error(propName + ' in ' + componentName + " is longer not within weight limit");
     }
@@ -35,7 +35,7 @@ Product.propTypes = {
   producer: PropTypes.string,
   hasWatermark: PropTypes.bool,
   color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']).isRequired,
-  weight: PropTypes.number.isRequired
+  weight: weightRange.isRequired
 }
 
 export default Product;
