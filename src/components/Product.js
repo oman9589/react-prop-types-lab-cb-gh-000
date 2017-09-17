@@ -22,7 +22,6 @@ Product.defaultProps = {
 }
 
 Product.propTypes = {
-
   function weightRange(props, propName, componentName) {
     if (typeof props[propName] === 'int') {
       if (props[propName] < 80 || props[propName] > 180) {
@@ -30,8 +29,7 @@ Product.propTypes = {
       }
     }
     return null;
-  }
-  
+  };
   name: PropTypes.string.isRequired,
   producer: PropTypes.string,
   hasWatermark: PropTypes.bool,
