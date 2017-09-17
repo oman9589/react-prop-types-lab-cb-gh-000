@@ -22,10 +22,10 @@ Product.defaultProps = {
 }
 
 Product.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   producer: PropTypes.string,
   hasWatermark: PropTypes.bool,
-  color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']),
+  color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']).isRequired,
   weight: function(props, propName, componentName) {
     if (props[propName] < 80 || props[propName] > 300) {
       return new Error(
@@ -33,7 +33,7 @@ Product.propTypes = {
         ' `' + componentName + '`. Validation failed.'
       )
     }
-  }
+  }.isRequired
 }
 
 export default Product;
