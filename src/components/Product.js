@@ -27,7 +27,7 @@ const weightRange = createPropType(
     prop <= 300 &&
     prop >= 80,
     'Must meet weight restrictions'
-)
+);
 
 Product.propTypes = {
   name: PropTypes.string.isRequired,
