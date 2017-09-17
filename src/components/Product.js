@@ -31,8 +31,9 @@ function weightRange(props, propName, componentName) {
     } else if (value < 80 || value > 300) {
       return new Error("Required prop '${propName}' was not specified in '${componentName}.");
     }
+  } else {
+    return new Error("Required prop '${propName}' was not specified in '${componentName}.");
   }
-  return null;
 }
 
 Product.propTypes = {
