@@ -28,6 +28,8 @@ Product.propTypes = {
   color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']).isRequired,
   weight: function(props, propName, componentName) {
     window.alert(props[propName]);
+    window.alert(!props[propName]);
+    window.alert(typeof props[propName]);
     if (!props[propName]) {
       return new Error();
     }
