@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { createPropType } from './../../lib/custom-proptypes';
 
 class Product extends React.Component {
   render() {
