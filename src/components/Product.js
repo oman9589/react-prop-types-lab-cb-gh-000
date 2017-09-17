@@ -32,7 +32,7 @@ Product.propTypes = {
     } else if (isNaN(props[propName])) {
       return new Error('The `weight` prop is not a number.');
     } else if (props[propName] < 80 || props[propName] > 300) {
-      return new Error();
+      return new Error('The `weight` prop out of range.');
     }
   },
 }
