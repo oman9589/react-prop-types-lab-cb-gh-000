@@ -1,6 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types'
-class Product implements React.component {
+import PropTypes from 'prop-types';
+
+class Product extends React.component {
   render() {
     return (
       <ul>
@@ -16,4 +17,8 @@ class Product implements React.component {
 
 Product.defaultProps = {
   hasWatermark: false,
+}
+
+Product.propTypes = {
+  
 }
