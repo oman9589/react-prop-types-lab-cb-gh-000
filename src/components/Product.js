@@ -22,7 +22,7 @@ Product.defaultProps = {
 }
 
 function weightRange(props, propName, componentName) {
-  if (typeof props[propName] === 'number') {
+  if (typeof props['weight'] === 'number') {
     let value = props[propName];
     if (value < 80 || value > 300) {
       return new Error("Required prop '${propName}' was not specified in '${componentName}.");
