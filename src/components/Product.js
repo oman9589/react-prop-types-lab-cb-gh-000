@@ -26,10 +26,8 @@ function weightRange(props, propName, componentName) {
     let value = props[propName];
 
     // If no hidden label is set, children are required for accessibility
-    if (!(typeof value === 'number')) {
-      if (value < 80 || value > 300)) {
-        return new Error("Required prop '${propName}' was not specified in '${componentName}.");
-      }
+    if (!(typeof value === 'number') || (value < 80 || value > 300)) {
+      return new Error("Required prop '${propName}' was not specified in '${componentName}.");
     }
   }
   return null;
