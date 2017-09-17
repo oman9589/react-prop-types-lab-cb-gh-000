@@ -26,15 +26,15 @@ Product.propTypes = {
   producer: PropTypes.string,
   hasWatermark: PropTypes.bool,
   color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']).isRequired,
-  weight: PropTypes.customfunc.isRequired 
-  customfunc: function(props, propName, componentName) {
-    if (props[propName] < 80 || props[propName] > 300) {
-      return new Error(
-        'Invalid prop `' + propName + '` supplied to' +
-        ' `' + componentName + '`. Validation failed.'
-      )
+  weight: PropTypes.weightRange.isRequired 
+}
+
+function weightRange(props, propName, componentName) {
+  if (typeof value === 'int') {
+    if (value < 80 || value > 180) {
+      return new Error(propName + ' in ' + componentName + " is longer than 140 characters");
     }
-  }.isRequired
+  }
 }
 
 export default Product;
