@@ -30,12 +30,10 @@ Product.propTypes = {
     if (!props[propName]) {
       window.alert('noo');
       return new Error();
-    }
-    if (typeof props[propName] !== 'number') {
+    } elseif (typeof props[propName] !== 'number') {
       window.alert('noo');
       return new Error();
-    }
-    if (props[propName] < 80 || props[propName] > 300) {
+    } elseif (props[propName] < 80 || props[propName] > 300) {
       window.alert('noo');
       return new Error();
     }
