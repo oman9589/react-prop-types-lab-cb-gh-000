@@ -30,6 +30,7 @@ Product.propTypes = {
     window.alert(props[propName]);
     window.alert(!props[propName]);
     window.alert(typeof props[propName]);
+    window.alert(props[propName] < 80 || props[propName] > 300);
     if (!props[propName]) {
       return new Error();
     }
