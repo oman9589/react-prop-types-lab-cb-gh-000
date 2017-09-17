@@ -22,13 +22,17 @@ Product.defaultProps = {
   hasWatermark: false,
 }
 
-const weightRange = createPropType(
-  prop =>
-    Number.isInteger(prop) &&
-    prop <= 300 &&
-    prop >= 80,
-    'Must meet weight restrictions'
-);
+function weightRange(props, propName, componentName) {
+  if (!props['hiddenLabel']) {
+    let value = props[propName];
+
+    // If no hidden label is set, children are required for accessibility
+    if (!typeof value === 'number') {
+      return new Error(`Required prop '${propName}' was not specified in '${componentName}'.);
+    }
+  }
+  return null;
+}
 
 Product.propTypes = {
   name: PropTypes.string.isRequired,
