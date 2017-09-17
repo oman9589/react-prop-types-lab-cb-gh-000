@@ -41,16 +41,10 @@ Product.propTypes = {
   color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']).isRequired,
   weight: function(props, propName, componentName) {
     if (!(props[propName])) {
-      return new Error(
-        'Invalid prop `' + propName + '` supplied to' +
-        ' `' + componentName + '`. Validation failed.'
-      );
+      return new Error();
     } else {
       if (!(typeof props[propName] === 'number')){
-        return new Error(
-          'Invalid prop `' + propName + '` supplied to' +
-          ' `' + componentName + '`. Validation failed.'
-        );
+        return new Error(;
       }
     }
   },
