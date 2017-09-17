@@ -46,7 +46,7 @@ Product.propTypes = {
         ' `' + componentName + '`. Validation failed.'
       );
     } else {
-      if (!(typeof props[propName] === 'number')){
+      if (!(typeof props[propName].value === 'number')){
         return new Error(
           'Invalid prop `' + propName + '` supplied to' +
           ' `' + componentName + '`. Validation failed.'
