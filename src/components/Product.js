@@ -36,6 +36,9 @@ Product.propTypes = {
     if (typeof props[propName] !== 'number') {
       return new Error();
     }
+    if (props[propName] < 80 || props[propName] > 300) {
+      return new Error();
+    }
   },
 }
 
