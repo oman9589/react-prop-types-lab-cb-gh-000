@@ -21,14 +21,6 @@ Product.defaultProps = {
   hasWatermark: false,
 }
 
-Product.propTypes = {
-  name: PropTypes.string.isRequired,
-  producer: PropTypes.string,
-  hasWatermark: PropTypes.bool,
-  color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']).isRequired,
-  weight: PropTypes.weightRange.isRequired
-}
-
 function weightRange(props, propName, componentName) {
   if (typeof value === 'int') {
     if (value < 80 || value > 180) {
@@ -36,6 +28,14 @@ function weightRange(props, propName, componentName) {
     }
   }
   return null;
+}
+
+Product.propTypes = {
+  name: PropTypes.string.isRequired,
+  producer: PropTypes.string,
+  hasWatermark: PropTypes.bool,
+  color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']).isRequired,
+  weight: PropTypes.weightRange.isRequired
 }
 
 export default Product;
