@@ -26,7 +26,8 @@ Product.propTypes = {
   producer: PropTypes.string,
   hasWatermark: PropTypes.bool,
   color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']).isRequired,
-  weight: function(props, propName, componentName) {
+  weight: PropTypes.customfunc.isRequired 
+  customfunc: function(props, propName, componentName) {
     if (props[propName] < 80 || props[propName] > 300) {
       return new Error(
         'Invalid prop `' + propName + '` supplied to' +
