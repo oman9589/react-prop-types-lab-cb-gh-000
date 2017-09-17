@@ -27,17 +27,19 @@ Product.propTypes = {
   hasWatermark: PropTypes.bool,
   color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']).isRequired,
   weight: function(props, propName, componentName) {
-    window.alert(props[propName]);
     window.alert(!props[propName]);
     window.alert(typeof props[propName] !== 'number');
     window.alert(props[propName] < 80 || props[propName] > 300);
     if (!props[propName]) {
+      window.alert('noo');
       return new Error();
     }
     if (typeof props[propName] !== 'number') {
+      window.alert('noo');
       return new Error();
     }
     if (props[propName] < 80 || props[propName] > 300) {
+      window.alert('noo');
       return new Error();
     }
   },
