@@ -35,7 +35,7 @@ Product.propTypes = {
   producer: PropTypes.string,
   hasWatermark: PropTypes.bool,
   color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']).isRequired,
-  weight: PropTypes.weightRange.isRequired
+  weight: PropTypes.weightRange.isRequired,
 }
 
 export default Product;
