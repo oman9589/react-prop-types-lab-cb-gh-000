@@ -43,7 +43,7 @@ Product.propTypes = {
     if (!props[propName]) {
       return new Error();
     }
-    if (typeof props[propName] != 'number') {
+    if (typeof props[propName] !== 'number') {
       return new Error();
     }
   },
