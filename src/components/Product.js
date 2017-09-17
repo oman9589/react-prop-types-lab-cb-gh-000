@@ -35,6 +35,7 @@ function weightRange(props, propName, componentName) {
       return new Error(propName + ' in ' + componentName + " is longer not within weight limit");
     }
   }
+  return null;
 }
 
 export default Product;
