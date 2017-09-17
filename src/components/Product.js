@@ -26,13 +26,13 @@ Product.propTypes = {
   producer: PropTypes.string,
   hasWatermark: PropTypes.bool,
   color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']).isRequired,
-  weight: PropTypes.weightRange.isRequired 
+  weight: PropTypes.weightRange.isRequired
 }
 
 function weightRange(props, propName, componentName) {
   if (typeof value === 'int') {
     if (value < 80 || value > 180) {
-      return new Error(propName + ' in ' + componentName + " is longer than 140 characters");
+      return new Error(propName + ' in ' + componentName + " is longer not within weight limit");
     }
   }
 }
