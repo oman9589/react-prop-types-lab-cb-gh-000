@@ -20,5 +20,7 @@ Product.defaultProps = {
 }
 
 Product.propTypes = {
-  
+
 }
+
+export default Product;
