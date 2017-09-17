@@ -13,3 +13,7 @@ class Product implements React.component {
     )
   }
 }
+
+Product.defaultProps = {
+  hasWatermark: false,
+}
