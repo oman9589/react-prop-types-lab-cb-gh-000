@@ -23,7 +23,7 @@ Product.defaultProps = {
 
 function weightRange(props, propName, componentName) {
   let value = props[propName];
-    if (value < 80 || value > 300) {
+    if (props[propName < 80 || props[propName > 300) {
       return new Error(propName + ' in ' + componentName + " is longer not within weight limit");
     }
 
